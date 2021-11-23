@@ -26,6 +26,9 @@ class ViewController: UIViewController, EditViewControllerDelegate,  UIPickerVie
         super.viewDidLoad()
         animal = Animal(name:["","",""], owner:["","",""], age:[0,0,0])
         animalType = 0
+        name.text = ""
+        owner.text = ""
+        age.text = ""
         pickerAnimal.dataSource = self
         pickerAnimal.delegate = self
     }
@@ -55,6 +58,11 @@ class ViewController: UIViewController, EditViewControllerDelegate,  UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return array[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if array[row] == "Snail" {
             ImageView.image = UIImage(named:"snail")
             animalType = 0
@@ -71,9 +79,6 @@ class ViewController: UIViewController, EditViewControllerDelegate,  UIPickerVie
             animalType = 2
             updateText()
         }
-        
-        
-        return array[row]
     }
     
     func updateText(){
