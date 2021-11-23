@@ -13,6 +13,7 @@
 		5669C24427491DAB000FB8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5669C24227491DAB000FB8A5 /* Main.storyboard */; };
 		5669C24627491DC2000FB8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5669C24527491DC2000FB8A5 /* Assets.xcassets */; };
 		5669C24927491DC2000FB8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5669C24727491DC2000FB8A5 /* LaunchScreen.storyboard */; };
+		5675E5C4274DA38400618A99 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675E5C3274DA38400618A99 /* Animal.swift */; };
 		56E097B0274BF8B600377688 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E097AF274BF8B600377688 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		5669C24527491DC2000FB8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5669C24827491DC2000FB8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5669C24A27491DC2000FB8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5675E5C3274DA38400618A99 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		56E097AF274BF8B600377688 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				5669C24727491DC2000FB8A5 /* LaunchScreen.storyboard */,
 				5669C24A27491DC2000FB8A5 /* Info.plist */,
 				56E097AF274BF8B600377688 /* EditViewController.swift */,
+				5675E5C3274DA38400618A99 /* Animal.swift */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				5669C24127491DAA000FB8A5 /* ViewController.swift in Sources */,
 				5669C23D27491DAA000FB8A5 /* AppDelegate.swift in Sources */,
 				5669C23F27491DAA000FB8A5 /* SceneDelegate.swift in Sources */,
+				5675E5C4274DA38400618A99 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,15 +16,16 @@ class ViewController: UIViewController, EditViewControllerDelegate,  UIPickerVie
     @IBOutlet weak var owner: UILabel!
     @IBOutlet weak var age: UILabel!
     
-    var n: String = ""
-    var o: String = ""
-    var a: String = ""
+    
+    var animal : Animal?
+    var animalType : Int!
     
     let array = ["Snail","Rhino","Frog"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        animal = Animal(name:["","",""], owner:["","",""], age:[0,0,0])
+        animalType = 0
         pickerAnimal.dataSource = self
         pickerAnimal.delegate = self
     }
@@ -38,9 +39,11 @@ class ViewController: UIViewController, EditViewControllerDelegate,  UIPickerVie
     }
     
     func sendData(name: String, owner: String, age: Int) {
-        self.name.text = name
-        self.owner.text = owner
-        self.age.text = String(age)
+        animal?.name[animalType] = name
+        animal?.owner[animalType] = owner
+        animal?.age[animalType] = age
+        
+        updateText()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -54,27 +57,29 @@ class ViewController: UIViewController, EditViewControllerDelegate,  UIPickerVie
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if array[row] == "Snail" {
             ImageView.image = UIImage(named:"snail")
-            
+            animalType = 0
+            updateText()
         }
         else if array[row] == "Rhino"{
             ImageView.image = UIImage(named:"rhino")
-            
+            animalType = 1
+            updateText()
         }
         
         else if array[row] == "Frog"{
             ImageView.image = UIImage(named:"frog")
-            
+            animalType = 2
+            updateText()
         }
         
         
         return array[row]
     }
     
-    func cleanText(){
-        name.text = ""
-        owner.text = ""
-        age.text = ""
+    func updateText(){
+        self.name.text = animal?.name[animalType]
+        self.owner.text = animal?.owner[animalType]
+        self.age.text = String(animal?.age[animalType] ?? 0)
     }
-    
 }
 
